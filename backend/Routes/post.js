@@ -413,7 +413,7 @@ router.post("/createpost", Fetchuser, upload.single('photo'), async (req, res) =
 
     fileStream.on('finish', async () => {
       // File upload successful, generate download link
-      const ImageURL = `https://firebasestorage.googleapis.com/v0/b/social-media-ff271.appspot.com/o/${fileName}?alt=media&token=9f32469a-49b2-469f-93ec-3fe046759af1`;
+      const ImageURL = `https://firebasestorage.googleapis.com/v0/b/social-media-ff271.appspot.com/o/${fileName}?alt=media&token=871a81f6-601e-4f98-a9e0-e15fb0c2a36f`;
       // Create a post with the generated download link
       const post = new Post({
         body,
@@ -489,7 +489,7 @@ router.put("/update/:postId", Fetchuser, upload.single('photo'), async (req, res
       fileStream.on('finish', async () => {
         // File upload successful, update post photo details
         post.photo = fileName;
-        post.ImageURL = `https://firebasestorage.googleapis.com/v0/b/insta-backend-fa2ee.appspot.com/o/${fileName}?alt=media&token=531eca62-f375-496b-acdb-e1cea7fe6fa4`;
+        post.ImageURL = `https://firebasestorage.googleapis.com/v0/b/social-media-ff271.appspot.com/o/${fileName}?alt=media&token=871a81f6-601e-4f98-a9e0-e15fb0c2a36f`;
 
         // Save the updated post
         const updatedPost = await post.save();
@@ -786,3 +786,4 @@ router.get("/get/home",Fetchuser,async(req,res)=>{
 })
 
 module.exports = router;
+
