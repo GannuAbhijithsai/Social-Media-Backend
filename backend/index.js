@@ -28,7 +28,7 @@ const options = {
         },
       },
     },
-    servers:[{url:'https://clone-backend-gqep.onrender.com/'},
+    servers:[{url:'https://social-media-backend-86dn.onrender.com/'},
       {
       url:'http://localhost:4000/'
   }]
